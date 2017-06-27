@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Pinocchio",
+      "release_year": 1940,
+      "runtime": 88
+    },
+    {
+      "id": 2,
+      "title": "Alice in Wonderland",
+      "release_year": 1951,
+      "runtime": 75
+    },
+    {
+      "id": 3,
+      "title": "Sleeping Beauty",
+      "release_year": 1959,
+      "runtime": 75
+    },
+    {
+      "id": 4,
+      "title": "One Hundred and One Dalmations",
+      "release_year": 1961,
+      "runtime": 79
+    },
+    {
+      "id": 5,
+      "title": "The Aristocats",
+      "release_year": 1970,
+      "runtime": 78
+    }
+  ]
+}
