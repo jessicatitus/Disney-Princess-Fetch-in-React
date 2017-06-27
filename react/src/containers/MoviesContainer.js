@@ -18,14 +18,13 @@ class MoviesContainer extends Component {
   // }
 
   componentDidMount() {
-    // debugger;
     fetch('http://localhost:4567/api/v1/movies')
     .then(response => response.json())
     .then(body => {
-      // let allMovies = body.movies
-      // let selectedMovies = allMovies.filter(movie => {
-      //   return movie.release_year < 1960
-      // })
+      let allMovies = body.movies
+      let selectedMovies = allMovies.filter(movie => {
+        return movie.release_year < 1960
+      })
       this.setState({ movies: body.movies })
     })
   }
@@ -42,7 +41,8 @@ class MoviesContainer extends Component {
   }
 
   render() {
-    // debugger;
+    let addNewMovie = (formPayload) => this.addNewMovie(formPayload)
+
     return(
       <div className="container">
         <h1>My Favorite Disney Movies</h1>
@@ -52,7 +52,7 @@ class MoviesContainer extends Component {
         />
         <hr />
         <FormContainer
-          addNewMovie={this.addNewMovie}
+          addNewMovie={addNewMovie}
         />
       </div>
     )
