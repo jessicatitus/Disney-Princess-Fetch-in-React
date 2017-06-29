@@ -1,0 +1,28 @@
+{
+  "princesses": [
+    {
+      "name": "Belle",
+      "id": 1
+    },
+    {
+      "name": "Cinderella",
+      "id": 2
+    },
+    {
+      "name": "Snow White",
+      "id": 3
+    },
+    {
+      "name": "Aurora",
+      "id": 4
+    },
+    {
+      "name": "Ariel",
+      "id": 5
+    },
+    {
+      "name": "Moana",
+      "id": 6
+    }
+  ]
+}

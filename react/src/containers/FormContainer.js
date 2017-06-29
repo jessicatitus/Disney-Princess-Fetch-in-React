@@ -6,9 +6,7 @@ class FormContainer extends Component {
     super(props);
 
     this.state = {
-      movieTitle: '',
-      movieReleaseYear: '',
-      movieRuntime: ''
+    princessName: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -17,28 +15,24 @@ class FormContainer extends Component {
   }
 
   handleChange(event) {
-    let value = event.target.value;
-    let name = event.target.name;
-    this.setState({ [name]: value })
+    let value = event.target.value; //track the value
+    let name = event.target.name; //track the name
+    this.setState({ [name]: value }) //dynamically tracks whatever you put in (grabs princessTitle, princessReleaseYear, princessRuntime)
   }
 
   handleClearForm(event) {
     event.preventDefault();
     this.setState({
-      movieTitle: '',
-      movieReleaseYear: '',
-      movieRuntime: ''
+    princessName: ''
     })
   };
 
   handleFormSubmit(event) {
     event.preventDefault();
     let formPayload = {
-      title: this.state.movieTitle,
-      release_year: parseInt(this.state.movieReleaseYear, 10),
-      runtime: parseInt(this.state.movieRuntime, 10)
+      name: this.state.princessName
     };
-    this.props.addNewMovie(formPayload);
+    this.props.addNewPrincess(formPayload);
     this.handleClearForm(event);
   };
 
@@ -46,21 +40,9 @@ class FormContainer extends Component {
     return(
       <form className="callout" onSubmit={this.handleFormSubmit}>
         <TextInputField
-          content={this.state.movieTitle}
-          label="Movie Title"
-          name="movieTitle"
-          handleChange={this.handleChange}
-        />
-        <TextInputField
-          content={this.state.movieReleaseYear}
-          label="Movie Release Year"
-          name="movieReleaseYear"
-          handleChange={this.handleChange}
-        />
-        <TextInputField
-          content={this.state.movieRuntime}
-          label="Movie Runtime (in minutes)"
-          name="movieRuntime"
+          content={this.state.princessName}
+          label="Princess Name"
+          name="princessName"
           handleChange={this.handleChange}
         />
 

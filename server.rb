@@ -14,31 +14,31 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 # HOW TO READ OUR FILE:
-def read_movies
-  JSON.parse(File.read("movies.json"))
+def read_princesses
+  JSON.parse(File.read("princesses.json"))
 end
 
 # API ENDPOINTS
 
-get "/api/v1/movies" do
-  movies = read_movies
+get "/api/v1/princesses" do
+  princesses = read_princesses #this is whats directing it to the correct json file
 
   content_type :json
-  json movies
+  json princesses
 end
 
-post "/api/v1/movies" do
-  current_movies = read_movies
+post "/api/v1/princesses" do
+  current_princesses = read_princesses
 
-  movie = JSON.parse(request.body.read)
-  movie["id"] = current_movies["movies"].last["id"] + 1
+  princess = JSON.parse(request.body.read)
+  princess["id"] = current_princesses["princesses"].last["id"] + 1
 
-  current_movies["movies"] << movie
-  File.write("movies.json", JSON.pretty_generate(current_movies))
+  current_princesses["princesses"] << princess
+  File.write("princesses.json", JSON.pretty_generate(current_princesses))
 
   content_type :json
   status 201
-  json movie
+  json princess
 end
 
 get "*" do

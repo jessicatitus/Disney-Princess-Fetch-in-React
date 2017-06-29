@@ -1,13 +1,10 @@
-body {
-  background-color: #c1c5ea;
-}
-
 .container {
-  background-color: white;
+  background-color: lightpink;
   max-width: 80%;
   margin: auto;
   padding: 5%;
   margin-top: 10%;
+  opacity: .9;
 }
 
 h1, p, li {
@@ -33,4 +30,57 @@ li {
 .buttons {
   text-align: center;
   margin: auto;
+}
+
+h1 {
+  font-family: 'Princess Sofia', cursive;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+ background: -webkit-linear-gradient(transparent, transparent),
+             url(http://www.myspacehippo.com/files/glitterbacks/bg345.gif) repeat;
+ background: -o-linear-gradient(transparent, transparent);
+ -webkit-background-clip: text;
+ /*text-shadow: 2px 2px #FFFFFF;*/
+}
+
+h1.title {
+  /*background-color: white; not working*/
+}
+
+html, body{
+  height: 100%;
+}
+body {
+			background-image: url(https://d24bnpykhxwj9p.cloudfront.net/s3file/s3fs-public/article/list/images/polkgfds.jpeg);
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+
+}
+
+div, body{
+  margin: 0;
+  padding: 0;
+  font-family: exo, sans-serif;
+
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.message {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height:45%;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.5em;
 }
